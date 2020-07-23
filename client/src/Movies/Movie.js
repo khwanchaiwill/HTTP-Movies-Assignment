@@ -32,12 +32,12 @@ function Movie({ addToSavedList }) {
 
   const handleDelete = evt => {  
     evt.preventDefault();
-    push("/")
+    
     axios
       .delete(`http://localhost:5000/api/movies/${params.id}`)
       .then(res => {
-        setMovie(res.data); 
-        window.location.reload(true)     
+        push("/")
+        setMovie(res.data);  
       })
       .catch(err =>{      
         console.log("who ohh something gone", err)

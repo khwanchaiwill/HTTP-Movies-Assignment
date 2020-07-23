@@ -50,7 +50,7 @@ const UpdateMovie = props => {
                 console.log(res)
                 setUpdate(res.data)
                 push(`/`);
-                window.location.reload(false);
+                // window.location.reload(false);
             })
             .catch(err => {
                 console.log(err)

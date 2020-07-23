@@ -37,7 +37,7 @@ const AddMovieform = () => {
                 console.log(res.data)
                 setNewMovie(res.data)
                 push('/')
-                window.location.reload(false)
+                // window.location.reload(false)
             })
             .catch(err => {
                 console.log("You come the wrong path with error", err)
