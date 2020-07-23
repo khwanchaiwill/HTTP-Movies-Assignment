@@ -6,7 +6,7 @@ import axios from 'axios';
 const initialValue = {
     director: "",
     metascore: "",
-    stars: [""],
+    stars: "",
     title: ""
    
 }
@@ -58,39 +58,43 @@ const UpdateMovie = props => {
     }
 
     return(
-        <div>
-            <h3>Update Movies</h3>
-            <form onSubmit={handleSubmit}>
-                <label>Director: &nbsp; </label>
-                <input 
-                    type="text"
-                    name="director"
-                    value={update.director}
-                    onChange={handleChange}
-                />
-                <label>Metascore: &nbsp; </label>
-                <input 
-                    type="text"
-                    name="metascore"
-                    value={update.metascore}
-                    onChange={handleChange}
-                />
-                <label>Title: &nbsp; </label>
-                <input 
-                    type="text"
-                    name="title"
-                    value={update.title}
-                    onChange={handleChange}
-                />
-                <label>Director: &nbsp; </label>
-                <input 
-                    type="text"
-                    name="stars"
-                    value={update.stars}
-                    onChange={handleChange}
-                />
-                <button>Update</button>
-            </form>
+        <div className="update-movie-list">
+            <div className="head-text">
+               <h3>Update Movies</h3> 
+            </div>
+            <div className="update-form">
+                <form onSubmit={handleSubmit}>
+                    <label>Director: &nbsp; </label>
+                    <input 
+                        type="text"
+                        name="director"
+                        value={update.director}
+                        onChange={handleChange}
+                    />
+                    <label>Metascore: &nbsp; </label>
+                    <input 
+                        type="text"
+                        name="metascore"
+                        value={update.metascore}
+                        onChange={handleChange}
+                    />
+                    <label>Title: &nbsp; </label>
+                    <input 
+                        type="text"
+                        name="title"
+                        value={update.title}
+                        onChange={handleChange}
+                    />
+                    <label>Director: &nbsp; </label>
+                    <input 
+                        type="text"
+                        name="stars"
+                        value={update.stars}
+                        onChange={handleChange}
+                    />
+                    <button className="btn">Update</button>
+                </form>
+            </div>
         </div>
     )
 }

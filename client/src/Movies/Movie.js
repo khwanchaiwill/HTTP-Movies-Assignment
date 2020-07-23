@@ -43,8 +43,8 @@ function Movie({ addToSavedList }) {
       <div className="save-button" onClick={saveMovie}>
         Save
       </div>
-      <button onClick={() => push(`/update-movie/${params.id}`)}>Update Movie</button>
-      <button onClick={handleDelete} >Delete Movie</button>
+      <button className="update-button" onClick={() => push(`/update-movie/${params.id}`)}>Update Movie</button>
+      <button className="update-button" onClick={handleDelete} >Delete Movie</button>
     </div>
   );
 }

@@ -6,14 +6,19 @@ body {
 }
 
 .movie-card {
-  background-color: #fff;
+  width: 95%;
+  background-image: linear-gradient(to left, skyblue, rgb(12, 165, 226), rgb(68, 216, 191));
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.24);
+  0 2px 4px rgba(0, 0, 0, 0.24);
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
+  color:white;
+  text-align: center;
+  text-shadow: rgb(248, 28, 28) 1px 2px;
+  font-size: large;
 }
 
 .movie-director {
@@ -22,7 +27,7 @@ body {
 }
 
 .saved-list {
-  background-color: #fff;
+  background-color: rgb(115, 253, 253);
   border: 0;
   box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12),
     0 2px 4px rgba(0, 0, 0, 0.24);
@@ -30,7 +35,7 @@ body {
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
-  width: 75%;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,9 +54,23 @@ body {
   padding: 5px;
 }
 .save-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
-  width: 75%;
+  width: 80%;
   margin: 1rem auto;
+  background-image: linear-gradient(to right, skyblue, rgb(58, 178, 226), rgb(47, 173, 223));
+}
+.update-button{
+  width:30%;
+  margin: 1% 0;
+  padding: 10px 5px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-image: radial-gradient( hotpink, pink);
+  font-size: 1rem;
 }
 .save-button {
   position: absolute;
@@ -67,11 +86,92 @@ body {
 }
 
 .home-button {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
   padding: 5px 10px;
   background-color: lightskyblue;
+
 }
 
 .movie-warning {
   color: red;
   text-align: center;
 }
+.save-movieItem{
+  display: flex;
+  text-decoration: none;
+  background-image: linear-gradient(to right, skyblue, seagreen);
+}
+.home-link{
+  text-decoration: none;
+  width: 45%;
+  text-align: center;
+  color: black;
+}
+.movie-list{
+  background-image: repeating-radial-gradient(skyblue, rgb(6, 139, 192), rgb(13, 64, 83));
+}
+.add-movie{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.add-form{
+  width: 50%;
+  text-align: center;
+}
+label{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+input{
+  margin: 1.5% 0;
+  width: 100%;
+  padding: 1% 0;
+  font-size: 1rem;
+  border: none;
+  background-image: linear-gradient(to bottom, skyblue, skyblue) ; 
+  outline: none;
+}
+.add-btn{
+  width: 20%;
+  padding: 1.5% 0;
+  border: double rgb(8, 138, 120);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  background-image: linear-gradient(to bottom, rgb(29, 243, 243), rgb(10, 212, 185));
+}
+.update-movie-list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.head-text{
+  width: 100%;
+  text-align: center;  
+  font-size: 1.5rem;
+}
+.update-form{
+  width: 50%;
+  text-align: center;
+}
+.btn{
+  width:30%;
+  margin: 1% 0;
+  padding: 10px 5px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-image: radial-gradient( hotpink, pink);
+  font-size: 1rem;
+}
+
