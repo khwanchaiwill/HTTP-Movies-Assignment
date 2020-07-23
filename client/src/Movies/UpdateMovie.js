@@ -14,7 +14,6 @@ const initialValue = {
 const UpdateMovie = props => {
     const [update, setUpdate] = useState(initialValue)
     console.log(props)
-    // const location = useLocation();
     const params = useParams();
     const { push } = useHistory();
     
@@ -50,7 +49,8 @@ const UpdateMovie = props => {
             .then(res => {
                 console.log(res)
                 setUpdate(res.data)
-               push(`/`);
+                push(`/`);
+                // window.location.reload(false);
             })
             .catch(err => {
                 console.log(err)

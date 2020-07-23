@@ -137,6 +137,7 @@ input{
   border: none;
   background-image: linear-gradient(to bottom, skyblue, skyblue) ; 
   outline: none;
+  text-align: center;
 }
 .add-btn{
   width: 20%;

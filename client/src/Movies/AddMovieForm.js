@@ -14,8 +14,7 @@ const initialValue = {
 
 const AddMovieform = () => {
     const [newMovie, setNewMovie] = useState(initialValue)
-    console.log(initialValue)
-    const { push } = useHistory()
+    const { push } = useHistory();
 
     const handleChange = evt => {
         evt.persist()
@@ -30,6 +29,7 @@ const AddMovieform = () => {
     }
 
     const handleSubmit = evt => {
+        
         evt.preventDefault();
         axios 
             .post("http://localhost:5000/api/movies", newMovie)
@@ -37,11 +37,13 @@ const AddMovieform = () => {
                 console.log(res.data)
                 setNewMovie(res.data)
                 push('/')
+                // window.location.reload(false)
             })
             .catch(err => {
                 console.log("You come the wrong path with error", err)
             })
     }
+   
 
     return(
         <div className="add-movie">

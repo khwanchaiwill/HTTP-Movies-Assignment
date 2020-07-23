@@ -6,12 +6,15 @@ import MovieCard from "./MovieCard";
 function Movie({ addToSavedList }) {
   const [movie, setMovie] = useState(null);
   const params = useParams();
-  const { push } = useHistory()
+  const { push } = useHistory();
 
   const fetchMovie = (id) => {
     axios
       .get(`http://localhost:5000/api/movies/${id}`)
-      .then((res) => setMovie(res.data))
+      .then(res => {
+        console.log(res.data)
+        setMovie(res.data)
+      })
       .catch((err) => console.log(err.response));
   };
 
@@ -27,19 +30,23 @@ function Movie({ addToSavedList }) {
     return <div>Loading movie information...</div>;
   }
 
-  const handleDelete = evt => {
+  const handleDelete = evt => {  
     evt.preventDefault();
+    
     axios
       .delete(`http://localhost:5000/api/movies/${params.id}`)
       .then(res => {
-        setMovie(res.data)
-        push(`/`)
+        push("/")
+        setMovie(res.data);  
+      })
+      .catch(err =>{      
+        console.log("who ohh something gone", err)
       })
   }
+
   return (
     <div className="save-wrapper">
       <MovieCard movie={movie} />
-      
       <div className="save-button" onClick={saveMovie}>
         Save
       </div>
